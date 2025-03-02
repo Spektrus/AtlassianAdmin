@@ -1,0 +1,39 @@
+{{ define "content" }}
+<div class="body d-flex py-3">
+  <div class="container-xxl">
+    <h1 class="mb-4">CONNECTION SETTINGS</h1>
+    <form id="jiraForm" class="mb-3">
+      <!-- Campo Domain -->
+      <div class="mb-3">
+        <label for="domain" class="form-label">Dominio Jira (Ej: https://...)</label>
+        <input type="text" class="form-control" id="domain" name="domain" required>
+      </div>
+      <!-- Campo Email -->
+      <div class="mb-3">
+        <label for="correo" class="form-label">Email</label>
+        <input type="text" class="form-control" id="correo" name="correo" required>
+      </div>
+      <!-- Campo Token -->
+      <div class="mb-3">
+        <label for="token" class="form-label">Token de acceso</label>
+        <input type="text" class="form-control" id="token" name="token" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Check Connection</button>
+    </form>
+
+    <!-- Contenedor para listar las conexiones almacenadas -->
+    <div id="connectionsList"></div>
+    <pre id="resultado"></pre>
+  </div>
+</div>
+<!-- Cargar scripts comunes -->
+<script src="/assets/bundles/libscripts.bundle.js"></script>
+<script src="/assets/js/template.js"></script>
+<!-- Bloque de script para inicializar la configuración de conexión -->
+<script type="module">
+  import { initConnectionSettings } from "/assets/js/acciones/connection_settings.js";
+  document.addEventListener("DOMContentLoaded", () => {
+    initConnectionSettings();
+  });
+</script>
+{{ end }}

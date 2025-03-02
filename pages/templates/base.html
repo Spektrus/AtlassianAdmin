@@ -1,0 +1,116 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>::eBazar::  Dashboard </title>
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon"> <!-- Favicon-->
+
+    <!-- plugin css file  -->
+    <link rel="stylesheet" href="/assets/plugin/datatables/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="/assets/plugin/datatables/dataTables.bootstrap5.min.css">
+
+    <!-- plugin css file  --><!--Esto estaba en PRODUCT LIST -->
+    <link rel="stylesheet" href="/assets/plugin/nouislider/nouislider.min.css">
+    <link rel="stylesheet" href="/assets/css/choices.min.css">
+
+
+   <!--plugin css file --><!--Esto estaba en PRODUCT ADD -->
+   <link rel="stylesheet" href="assets/plugin/multi-select/css/multi-select.css"><!-- Multi Select Css -->
+   <link rel="stylesheet" href="assets/plugin/bootstrap-tagsinput/bootstrap-tagsinput.css"><!-- Bootstrap Tagsinput Css -->
+   <link rel="stylesheet" href="assets/plugin/cropper/cropper.min.css"><!--Cropperer Css -->   
+   <link rel="stylesheet" href="assets/plugin/dropify/dist/css/dropify.min.css"/><!-- Dropify Css -->
+
+
+
+
+
+    <!-- project css file  -->
+    <link rel="stylesheet" href="/assets/css/ebazar.style.min.css">
+    <style>
+        .filter-size ul {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          flex-wrap: wrap; /* Permitir que pase a la siguiente fila si no cabe */
+          gap: 10px; /* Espaciado entre los elementos */
+        }
+      
+        .filter-size li {
+          padding: 5px 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          min-width: 40px; /* Ancho mínimo para no colapsar en textos largos */
+          text-align: center;
+          white-space: nowrap; /* Evitar que el texto dentro del li se divida en múltiples líneas */
+        }
+      
+        .filter-size li:hover {
+          background-color: #f0f0f0;
+          cursor: pointer;
+        }
+      </style>
+</head>
+<body>
+    <div id="ebazar-layout" class="theme-blue">
+        <!-- sidebar -->
+        {{ template "aside.html" . }}
+        <!-- main body area -->
+        <div class="main px-lg-4 px-md-4">
+            <!-- Body: Header -->
+            {{ template "navbar.html" . }}
+            <!-- Body: Body -->
+            {{ block "content" . }}{{ end }}
+            <!-- Modal Custom Settings-->
+            {{ template "modal.html" . }}
+        </div>
+    </div>
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

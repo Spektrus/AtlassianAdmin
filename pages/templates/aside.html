@@ -1,0 +1,32 @@
+<div class="sidebar px-4 py-4 py-md-4 me-0">
+  <div class="d-flex flex-column h-100">
+      <a href="index.html" class="mb-0 brand-icon">
+          <span class="logo-icon">
+              <i class="bi bi-bag-check-fill fs-4"></i>
+          </span>
+          <span class="logo-text">eBazar</span>
+      </a>
+      <!-- Menu: main ul -->
+      <ul class="menu-list flex-grow-1 mt-3">
+          <li><a class="m-link {{if eq .ActivePage "Conection Settings"}}active{{end}}" href="/connection_settings"><i class="icofont-home fs-5"></i> <span>Connection Settings</span></a></li>
+          <li><a class="m-link {{if eq .ActivePage "Data"}}active{{end}}" href="/data"><i class="icofont-home fs-5"></i> <span>Data</span></a></li>
+          <li><a class="m-link {{if eq .ActivePage "States"}}active{{end}}" href="/states"><i class="icofont-home fs-5"></i> <span>States</span></a></li>
+          <li class="collapsed">
+            <a class="m-link {{if or (eq .ActivePage "product-grid") (eq .ActivePage "product-list") (eq .ActivePage "product-edit") (eq .ActivePage "product-detail") (eq .ActivePage "product-add") (eq .ActivePage "product-cart") (eq .ActivePage "checkout")}}active{{end}}" data-bs-toggle="collapse" data-bs-target="#menu-product" href="#">
+                <i class="icofont-truck-loaded fs-5"></i> <span>DE EJEMPLO A FUTURO</span> <span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span></a>
+                  <!-- Menu: Sub menu ul -->
+                  <ul class="sub-menu collapse {{if or (eq .ActivePage "product-grid") (eq .ActivePage "product-list") (eq .ActivePage "product-edit") (eq .ActivePage "product-detail") (eq .ActivePage "product-add") (eq .ActivePage "product-cart") (eq .ActivePage "checkout")}}show{{end}}" id="menu-product">
+                    <li><a class="ms-link {{if eq .ActivePage "product-list"}}active{{end}}" href="/search-scenes">Product List</a></li>
+                    <li><a class="ms-link {{if eq .ActivePage "searh-scenes"}}active{{end}}" href="product-edit.html">Product Edit</a></li>
+                    <li><a class="ms-link {{if eq .ActivePage "product-add"}}active{{end}}" href="/scene-add">Product Add</a></li>
+                    <li><a class="ms-link {{if eq .ActivePage "product-cart"}}active{{end}}" href="product-cart.html">Shopping Cart</a></li>
+                    <li><a class="ms-link {{if eq .ActivePage "checkout"}}active{{end}}" href="checkout.html">Checkout</a></li>
+                  </ul>
+          </li>
+      </ul>
+      <!-- Menu: menu collepce btn -->
+      <button type="button" class="btn btn-link sidebar-mini-btn text-light">
+          <span class="ms-2"><i class="icofont-bubble-right"></i></span>
+      </button>
+  </div>
+</div>

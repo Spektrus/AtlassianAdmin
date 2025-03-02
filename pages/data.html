@@ -1,0 +1,44 @@
+{{ define "content" }}
+<div class="body d-flex py-3">
+  <div class="container-xxl">
+    <h1 class="mb-4">DATA STATUS</h1>
+    <form id="jiraForm" class="mb-3">
+      <!-- Checkboxes -->
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="proyectos" name="proyectos" checked>
+        <label class="form-check-label" for="proyectos">
+          Buscar Proyectos
+        </label>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="workflows" name="workflows" checked>
+        <label class="form-check-label" for="workflows">
+          Buscar Workflows
+        </label>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="estados" name="estados" checked>
+        <label class="form-check-label" for="estados">
+          Buscar Estados
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Ejecutar</button>
+    </form>
+
+    <pre id="resultado"></pre>
+  </div>
+</div>
+<!-- Cargar scripts comunes -->
+<script src="/assets/bundles/libscripts.bundle.js"></script>
+<script src="/assets/js/template.js"></script>
+<!-- Bloque de script para importar y ejecutar la función initGetting -->
+<script type="module">
+    import { initGetting } from "/assets/js/acciones/getting.js";
+    document.addEventListener("DOMContentLoaded", () => {
+        initGetting();
+    });
+</script>
+
+{{ end }}
+
+  

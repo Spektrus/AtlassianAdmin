@@ -1,0 +1,20 @@
+{{ define "content" }}
+<div class="body d-flex py-3">
+    <div class="container-xxl">
+        <h1 class="mb-4">TEST - STATES</h1>
+
+        <!-- Aquí se generará la tabla con los estados -->
+        <div id="resultado"></div>
+    </div>
+</div>
+<!-- Cargar los scripts (incluyendo el de la tabla de estados) -->
+<script src="/assets/bundles/libscripts.bundle.js"></script>
+<script src="/assets/js/template.js"></script>
+<!-- Bloque de script para importar y ejecutar las funciones del módulo -->
+<script type="module">
+    import { renderStatesTable } from "/assets/js/acciones/get_things.js";
+  
+
+</script>
+  
+{{ end }}
